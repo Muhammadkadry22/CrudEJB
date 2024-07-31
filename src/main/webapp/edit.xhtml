@@ -1,0 +1,16 @@
+<f:view xmlns:h="jakarta.faces.html" xmlns:f="jakarta.faces.core">
+
+
+    <h:form>
+        <h1><h:outputText value="Create/Edit"/></h1>
+        <h:panelGrid columns="2">
+        
+            <h:outputLabel value="Name:" for="name" />
+            <h:inputText id="name" value="#{employeeManagedBean.employee.name}" title="Name" />
+            <h:outputLabel value="Salary:" for="salary" />
+            <h:inputText id="salary" value="#{employeeManagedBean.employee.salary}" title="Salary" />
+        </h:panelGrid>
+          <h:commandButton value="Update" action="#{EmployeeManagedBeam.updateEmployee}" />
+        <h:commandButton value="Back to List" action="index.xhtml" immediate="true" />
+    </h:form>
+</f:view>

@@ -1,0 +1,39 @@
+<f:view xmlns:h="jakarta.faces.html" xmlns:f="jakarta.faces.core">
+
+
+    <h:form>
+        <h1><h:outputText value="List"/></h1>
+        <h:dataTable value="#{employeeManagedBean.employees}" var="item">
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Id"/>
+                </f:facet>
+                <h:outputText value="#{item.id}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Name"/>
+                </f:facet>
+                <h:outputText value="#{item.name}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Salary"/>
+                </f:facet>
+                <h:outputText value="#{item.salary}"/>
+            </h:column>
+             <h:column>
+                <f:facet name="header">Actions</f:facet>
+                <h:commandButton value="Edit" action="edit.xhtml">
+                    <f:setPropertyActionListener value="#{employee}" target="#{EmployeeMangedBean.employee}" />
+                </h:commandButton>
+                <h:commandButton value="Delete" action="#{EmployeeMangedBean.deleteEmployee(employee)}" />
+            </h:column>
+        </h:dataTable>
+          <h:commandButton value="Add New Employee" action="create.xhtml" />
+    </h:form>
+</f:view>
+
+
+
+

@@ -1,0 +1,9 @@
+com\isfp\DOAs\EmployeeFacade.class
+com\isfp\Services\EmployeeService.class
+com\isfp\crudtraining\resources\JakartaEE10Resource.class
+com\isfp\DOAs\EmployeeFacadeLocal.class
+com\isfp\Services\EmployeeServiceLocal.class
+com\isfp\Controllers\EmployeeManagedBean.class
+com\isfp\crudtraining\JakartaRestConfiguration.class
+com\isfp\Entities\Employee.class
+com\isfp\DOAs\AbstractFacade.class
